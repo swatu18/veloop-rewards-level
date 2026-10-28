@@ -1,0 +1,23 @@
+.section { display: grid; gap: 14px; align-content: start; }
+.head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.title { font-size: 1.15rem; font-weight: 700; }
+.filter { position: relative; display: inline-flex; align-items: center; gap: 6px; padding: 0 10px; min-height: 40px; border-radius: 12px; border: 1px solid var(--vl-line); background: rgba(255, 255, 255, 0.04); color: var(--vl-muted); }
+.filter select { background: transparent; border: 0; color: var(--vl-text); font-size: 0.85rem; padding: 8px 2px; }
+.filter select option { color: #111; }
+.list { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; max-height: 420px; overflow-y: auto; }
+.row { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 14px; background: rgba(255, 255, 255, 0.035); border: 1px solid var(--vl-line); }
+.ico { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; color: var(--vl-gold-hi); background: rgba(233, 185, 73, 0.12); }
+.txt { display: grid; gap: 1px; min-width: 0; }
+.txt strong { color: var(--vl-gold-hi); font-size: 0.95rem; }
+.txt span { font-size: 0.88rem; }
+.txt small { color: var(--vl-muted); font-size: 0.75rem; }
+.none { color: var(--vl-muted); font-size: 0.88rem; padding: 8px; }
+.empty { display: grid; justify-items: center; gap: 8px; text-align: center; padding: 28px 12px; border: 1px dashed var(--vl-line); border-radius: 16px; color: var(--vl-muted); }
+.empty svg { color: var(--vl-gold); }
+.empty h3 { color: var(--vl-text); font-size: 1.05rem; }
+.summary { display: grid; gap: 8px; padding: 12px 14px; border-radius: 14px; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--vl-line); }
+.summary > p { font-weight: 700; font-size: 0.9rem; }
+.summary div { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.88rem; color: var(--vl-muted); }
+.summary span { display: inline-flex; align-items: center; gap: 6px; }
+.summary strong { color: var(--vl-text); }
+.summary svg { color: var(--vl-gold); }

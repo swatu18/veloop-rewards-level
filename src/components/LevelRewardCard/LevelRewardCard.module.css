@@ -1,0 +1,21 @@
+.card {
+  position: relative; display: flex; align-items: center; gap: 14px; width: 100%; padding: 14px; text-align: left;
+  color: var(--vl-text); border-radius: 16px; border: 1px solid var(--vl-line); background: rgba(255, 255, 255, 0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.card:hover { transform: translateY(-3px); border-color: rgba(255, 255, 255, 0.2); background: rgba(255, 255, 255, 0.06); }
+.body { display: grid; gap: 6px; min-width: 0; }
+.name { font-family: 'Sora', sans-serif; font-weight: 700; }
+.state { font-size: 0.78rem; font-weight: 600; color: var(--vl-muted); }
+.none { font-size: 0.8rem; color: var(--vl-muted); }
+.done .state { color: #7fe0b2; }
+.current { border-color: rgba(233, 185, 73, 0.6); background: rgba(233, 185, 73, 0.08); }
+.current .state { color: var(--vl-gold-hi); }
+.next .state { color: #c9b8ff; }
+.next { border-style: dashed; border-color: rgba(141, 115, 242, 0.5); }
+.locked { opacity: 0.8; }
+.selected { box-shadow: 0 0 0 2px rgba(248, 220, 138, 0.55); }
+
+@media (min-width: 768px) {
+  .card { flex-direction: column; align-items: flex-start; width: 178px; min-height: 200px; }
+}

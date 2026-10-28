@@ -1,0 +1,23 @@
+.header { position: sticky; top: 0; z-index: 40; background: rgba(22, 24, 39, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid var(--vl-line); }
+.inner { display: flex; align-items: center; gap: 16px; min-height: 64px; }
+.brand { text-decoration: none; margin-right: auto; }
+.nav { display: none; gap: 4px; }
+.link { padding: 9px 16px; border-radius: 12px; font-weight: 600; font-size: 0.92rem; text-decoration: none; color: var(--vl-muted); transition: color 0.15s ease, background 0.15s ease; }
+.link:hover { color: var(--vl-text); background: rgba(255, 255, 255, 0.06); }
+.active { color: var(--vl-gold-hi); background: rgba(233, 185, 73, 0.12); }
+.right { display: flex; align-items: center; gap: 8px; }
+.balance { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border-radius: 999px; font-weight: 700; font-size: 0.88rem; color: var(--vl-gold-hi); text-decoration: none; background: rgba(233, 185, 73, 0.12); border: 1px solid rgba(233, 185, 73, 0.3); }
+.iconBtn { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; border: 1px solid var(--vl-line); background: var(--vl-surface); color: var(--vl-text); }
+.bellWrap { position: relative; }
+.pop { position: absolute; right: 0; top: calc(100% + 8px); width: min(300px, 86vw); padding: 14px; display: grid; gap: 10px; border-radius: 14px; background: #262a45; border: 1px solid rgba(255, 255, 255, 0.14); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5); }
+.pop ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.pop li { display: grid; gap: 1px; font-size: 0.85rem; }
+.pop li strong { color: var(--vl-gold-hi); }
+.pop li span { color: var(--vl-muted); }
+.popTitle { font-weight: 700; font-size: 0.9rem; }
+.popEmpty { color: var(--vl-muted); font-size: 0.85rem; }
+.avatar { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; font: 700 1rem 'Sora', sans-serif; text-decoration: none; color: #2a1d05; background: linear-gradient(180deg, var(--vl-gold-hi), var(--vl-gold-lo)); }
+.signin { padding: 9px 12px; font-weight: 600; font-size: 0.9rem; text-decoration: none; color: var(--vl-text); }
+.signup { min-height: 42px; padding: 8px 16px; font-size: 0.9rem; text-decoration: none; }
+@media (max-width: 479px) { .signup { display: none; } .balance { padding: 6px 10px; } }
+@media (min-width: 768px) { .nav { display: flex; } .brand { margin-right: 12px; } .right { margin-left: auto; } .inner { gap: 12px; } }

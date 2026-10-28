@@ -1,0 +1,18 @@
+.card { display: grid; gap: 12px; align-content: start; justify-items: start; }
+.head { display: flex; align-items: center; gap: 4px; }
+.title { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.1rem; }
+.muted { color: var(--vl-muted); font-size: 0.88rem; }
+.stage { position: relative; width: 100%; display: grid; place-items: center; padding: 6px 0 2px; border-radius: 16px; outline-offset: 4px; }
+.chest { width: min(200px, 60%); height: auto; overflow: visible; }
+.glow { animation: pulse 3.6s ease-in-out infinite; transform-origin: center; }
+@keyframes pulse { 50% { opacity: 0.55; } }
+.lid { transform-box: fill-box; transform-origin: 0 100%; transition: transform 0.35s ease; }
+.gem1, .gem2 { transition: transform 0.35s ease; }
+.stage:hover .lid, .stage:focus-visible .lid { transform: translateY(-6px) rotate(-4deg); }
+.stage:hover .gem1, .stage:focus-visible .gem1 { transform: translateY(-8px); }
+.stage:hover .gem2, .stage:focus-visible .gem2 { transform: translateY(-11px); }
+.lock { position: absolute; top: 4px; right: 4px; display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; color: #cfd3e6; background: rgba(255, 255, 255, 0.07); border: 1px solid var(--vl-line); }
+.unlock { font-weight: 700; }
+.foot { margin-top: -4px; color: var(--vl-muted); font-size: 0.85rem; }
+.card > :global(.vl-btn-gold) { width: 100%; }
+.card > :global(div[role='progressbar']) { width: 100%; }

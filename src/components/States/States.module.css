@@ -1,0 +1,18 @@
+.error { display: grid; justify-items: center; gap: 10px; text-align: center; padding: 48px 20px; max-width: 520px; margin: 40px auto; color: var(--vl-muted); }
+.error svg { color: var(--vl-gold); }
+.error h2 { color: var(--vl-text); font-size: 1.3rem; }
+.sk { display: block; background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0.05) 75%); background-size: 200% 100%; animation: shimmer 1.4s linear infinite; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.grid { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); grid-template-areas: 'hero' 'reward' 'road' 'game' 'earn' 'act'; }
+.hero { grid-area: hero; display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; }
+.col { display: grid; gap: 10px; }
+.full { grid-column: 1 / -1; }
+.reward { grid-area: reward; display: grid; gap: 14px; }
+.road { grid-area: road; display: grid; gap: 14px; }
+.game { grid-area: game; display: grid; gap: 14px; }
+.earn { grid-area: earn; display: grid; gap: 14px; }
+.act { grid-area: act; display: grid; gap: 12px; align-content: start; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+@media (min-width: 992px) {
+  .grid { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 20px; grid-template-areas: 'hero reward' 'road road' 'game act' 'earn earn'; }
+}

@@ -1,0 +1,15 @@
+.badge { position: relative; display: inline-block; flex: none; }
+.sm { width: 48px; }
+.md { width: 72px; }
+.lg { width: 110px; }
+.xl { width: 128px; }
+.svg, .img { display: block; width: 100%; height: auto; }
+.current .svg, .current .img { filter: drop-shadow(0 6px 18px rgba(233, 185, 73, 0.35)); }
+.next .svg, .next .img { filter: drop-shadow(0 4px 12px rgba(233, 185, 73, 0.2)); }
+.locked .svg, .locked .img { filter: grayscale(1) brightness(0.6); opacity: 0.8; }
+.mark {
+  position: absolute; right: -2px; bottom: 2px; width: 22px; height: 22px; border-radius: 50%;
+  display: grid; place-items: center; color: #cfd3e6; background: #2a2e4a; border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.ok { color: #0e2a1c; background: var(--vl-green); border-color: transparent; }
+@media (min-width: 1200px) { .xl { width: 148px; } }

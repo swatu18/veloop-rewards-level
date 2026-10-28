@@ -1,0 +1,5 @@
+.logo { display: inline-flex; align-items: center; gap: 10px; color: var(--vl-text); }
+.mark { width: 30px; height: auto; flex: none; }
+.word { display: grid; line-height: 1.05; font: 800 1.05rem 'Sora', sans-serif; letter-spacing: 0.04em; }
+.word em { font: 500 0.66rem 'DM Sans', sans-serif; font-style: normal; letter-spacing: 0.18em; color: var(--vl-gold-hi); }
+.small .word { font-size: 0.95rem; }

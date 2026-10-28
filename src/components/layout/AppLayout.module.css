@@ -1,0 +1,4 @@
+.shell { min-height: 100vh; }
+.main { padding-top: 20px; padding-bottom: 96px; }
+@media (min-width: 768px) { .main { padding-top: 28px; padding-bottom: 48px; } }
+@media (min-width: 1600px) { .main { padding-top: 36px; } }

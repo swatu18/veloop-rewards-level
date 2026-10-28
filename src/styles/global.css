@@ -1,0 +1,86 @@
+:root {
+  --vl-bg: #161827;
+  --vl-surface: #1d2036;
+  --vl-surface-2: #262a45;
+  --vl-line: rgba(255, 255, 255, 0.08);
+  --vl-gold: #e9b949;
+  --vl-gold-hi: #f8dc8a;
+  --vl-gold-lo: #a87a22;
+  --vl-text: #f3f4fa;
+  --vl-muted: #9aa1bb;
+  --vl-purple: #8d73f2;
+  --vl-green: #4cc38a;
+  --vl-blue: #6f9dff;
+  --vl-orange: #f08a4b;
+  --bs-body-bg: #161827;
+  --bs-body-color: #f3f4fa;
+  --bs-body-font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: #161827;
+  color: var(--vl-text);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5 { font-family: 'Sora', 'DM Sans', sans-serif; margin: 0; letter-spacing: -0.01em; color: var(--vl-text); }
+p { margin: 0; }
+button { font-family: inherit; }
+
+.vl-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0) 60%), var(--vl-surface);
+  border: 1px solid var(--vl-line);
+  border-radius: 20px;
+  padding: 20px;
+}
+.vl-gold-text {
+  background: linear-gradient(180deg, var(--vl-gold-hi), var(--vl-gold) 60%, var(--vl-gold-lo));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.vl-btn-gold {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border: 0; border-radius: 14px; padding: 13px 22px; min-height: 48px;
+  font-weight: 700; color: #2a1d05;
+  background: linear-gradient(180deg, var(--vl-gold-hi), var(--vl-gold) 55%, var(--vl-gold-lo));
+  box-shadow: 0 6px 18px rgba(233, 185, 73, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.vl-btn-gold:hover:not(:disabled) { transform: translateY(-1px); filter: brightness(1.05); box-shadow: 0 10px 24px rgba(233, 185, 73, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
+.vl-btn-gold:disabled { opacity: 0.5; cursor: not-allowed; }
+.vl-btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 13px 22px; border-radius: 14px; font-weight: 600;
+  color: var(--vl-text); background: transparent; border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.vl-btn-ghost:hover { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.28); }
+
+.vl-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 2px solid var(--vl-gold-hi); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ---------- shared page + form styles ---------- */
+.vl-pagehead { margin-bottom: 20px; }
+.vl-pagehead h1 { font-size: clamp(1.4rem, 4vw, 2rem); font-weight: 700; }
+.vl-pagehead p { margin-top: 6px; color: var(--vl-muted); max-width: 60ch; }
+.vl-field { display: grid; gap: 6px; }
+.vl-field label { font-size: 0.85rem; font-weight: 600; color: var(--vl-text); }
+.vl-input {
+  width: 100%; min-height: 48px; padding: 12px 14px; border-radius: 12px; font-size: 1rem;
+  color: var(--vl-text); background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.vl-input::placeholder { color: #6f7691; }
+.vl-input:focus { outline: none; border-color: var(--vl-gold); background: rgba(255, 255, 255, 0.08); box-shadow: 0 0 0 3px rgba(233, 185, 73, 0.18); }
+.vl-input[aria-invalid='true'] { border-color: #f0746b; }
+.vl-error { color: #ff9b94; font-size: 0.82rem; }
+.vl-link { color: var(--vl-gold-hi); font-weight: 600; text-decoration: none; }
+.vl-link:hover { text-decoration: underline; }
+.vl-pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; font-weight: 700; color: #c9b8ff; background: rgba(141, 115, 242, 0.14); border: 1px solid rgba(141, 115, 242, 0.35); }

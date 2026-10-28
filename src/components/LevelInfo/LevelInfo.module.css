@@ -1,0 +1,10 @@
+.wrap { position: relative; display: inline-flex; vertical-align: middle; }
+.btn { display: inline-grid; place-items: center; width: 24px; height: 24px; padding: 0; border-radius: 50%; border: 0; background: transparent; color: var(--vl-muted); transition: color 0.15s ease, background 0.15s ease; }
+.btn:hover, .btn[aria-expanded='true'] { color: var(--vl-gold-hi); background: rgba(255, 255, 255, 0.08); }
+.tip {
+  position: absolute; top: calc(100% + 8px); z-index: 30; width: min(280px, 78vw);
+  padding: 12px 14px; border-radius: 12px; font-size: 0.82rem; font-weight: 400; line-height: 1.5; letter-spacing: 0; text-transform: none;
+  color: var(--vl-text); background: #2b3050; border: 1px solid rgba(255, 255, 255, 0.14); box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+.left { left: -8px; }
+.right { right: -8px; }

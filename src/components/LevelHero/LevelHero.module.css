@@ -1,0 +1,51 @@
+.hero { display: grid; gap: 16px; }
+.top { display: flex; align-items: flex-start; gap: 12px; }
+.greet { flex: 1; min-width: 0; }
+.greet h1 { font-size: clamp(1.15rem, 3.6vw, 1.7rem); font-weight: 700; }
+.greet p { margin-top: 4px; color: var(--vl-muted); font-size: 0.92rem; max-width: 56ch; }
+.iconBtn { position: relative; flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; border: 1px solid var(--vl-line); background: var(--vl-surface); color: var(--vl-text); }
+.dot { position: absolute; top: 9px; right: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--vl-gold); box-shadow: 0 0 0 2px var(--vl-surface); }
+
+.levelCard {
+  display: grid; gap: 14px 22px; grid-template-columns: auto 1fr; align-items: center;
+  border-color: rgba(233, 185, 73, 0.22);
+  background: radial-gradient(120% 120% at 0% 0%, rgba(233, 185, 73, 0.1), transparent 55%), var(--vl-surface);
+}
+.badgeCol { display: grid; justify-items: center; gap: 6px; }
+.levelName { font-size: 0.82rem; color: var(--vl-gold-hi); font-weight: 700; }
+.kicker { display: flex; align-items: center; gap: 2px; color: var(--vl-muted); font-size: 0.85rem; font-weight: 500; }
+.xpValue { font-family: 'Sora', sans-serif; font-weight: 800; font-size: clamp(1.9rem, 6vw, 2.8rem); line-height: 1.1; color: var(--vl-text); }
+.xpValue span { margin-right: 4px; }
+.toNext { margin-top: 4px; color: var(--vl-muted); font-size: 0.92rem; }
+.toNext strong { color: var(--vl-text); }
+.progressCol { grid-column: 1 / -1; display: grid; gap: 8px; }
+.labels { display: flex; justify-content: space-between; gap: 8px; font-size: 0.8rem; color: var(--vl-muted); }
+.reco {
+  grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 14px;
+  background: rgba(141, 115, 242, 0.1); border: 1px solid rgba(141, 115, 242, 0.25); color: #d8ccff; font-size: 0.9rem;
+}
+.reco svg { flex: none; }
+.reco p { flex: 1; }
+.reco :global(.vl-btn-ghost) { min-height: 40px; padding: 8px 16px; flex: none; }
+
+.boostTitle { font-size: 0.95rem; margin-bottom: 12px; }
+.tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.tile { display: grid; justify-items: center; gap: 4px; padding: 12px 6px; border-radius: 14px; background: rgba(255, 255, 255, 0.04); border: 1px solid var(--vl-line); text-align: center; }
+.tile strong { font-family: 'Sora', sans-serif; font-size: 0.98rem; }
+.tileLabel { font-size: 0.74rem; color: var(--vl-muted); }
+.tileIcon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; }
+.purple { background: rgba(141, 115, 242, 0.18); color: #c9b8ff; }
+.green { background: rgba(76, 195, 138, 0.16); color: #7fe0b2; }
+.orange { background: rgba(240, 138, 75, 0.16); color: #ffae7a; }
+
+@media (max-width: 479px) {
+  .levelCard { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .xpCol { display: grid; justify-items: center; }
+  .progressCol { width: 100%; }
+  .reco { flex-wrap: wrap; text-align: left; }
+  .reco :global(.vl-btn-ghost) { width: 100%; }
+}
+@media (min-width: 768px) {
+  .levelCard { grid-template-columns: auto 1fr; padding: 24px; }
+  .progressCol, .reco { grid-column: 1 / -1; }
+}

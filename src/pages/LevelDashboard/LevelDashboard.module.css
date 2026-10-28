@@ -1,0 +1,21 @@
+.grid { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); grid-template-areas: 'hero' 'reward' 'road' 'game' 'earn' 'act'; }
+.hero { grid-area: hero; min-width: 0; }
+.reward { grid-area: reward; min-width: 0; }
+.road { grid-area: road; min-width: 0; }
+.game { grid-area: game; min-width: 0; }
+.earn { grid-area: earn; min-width: 0; }
+.act { grid-area: act; min-width: 0; }
+.reward > section, .game > section, .act > section { height: 100%; }
+
+.guestBar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-bottom: 16px; padding: 10px 14px; border-radius: 14px; font-size: 0.88rem; color: var(--vl-muted); background: rgba(141, 115, 242, 0.1); border: 1px solid rgba(141, 115, 242, 0.28); }
+.guestBar span { flex: 1 1 220px; }
+.guestBtn { min-height: 38px; padding: 6px 14px; font-size: 0.85rem; text-decoration: none; }
+
+.demoBar { position: fixed; left: 8px; bottom: 76px; z-index: 40; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; max-width: calc(100vw - 16px); padding: 8px 12px; border-radius: 12px; font-size: 0.75rem; background: rgba(0, 0, 0, 0.7); border: 1px dashed rgba(255, 255, 255, 0.25); }
+.demoBar span { color: var(--vl-muted); }
+.demoBar a, .demoBar button { color: var(--vl-gold-hi); background: none; border: 0; padding: 2px 4px; text-decoration: underline; font-size: inherit; }
+
+@media (min-width: 768px) { .demoBar { bottom: 12px; } }
+@media (min-width: 992px) {
+  .grid { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 20px; grid-template-areas: 'hero reward' 'road road' 'game act' 'earn earn'; }
+}

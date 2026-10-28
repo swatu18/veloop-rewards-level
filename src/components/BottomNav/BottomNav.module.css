@@ -1,0 +1,4 @@
+.nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: repeat(5, 1fr); padding: 6px 6px calc(6px + env(safe-area-inset-bottom)); background: rgba(22, 24, 39, 0.94); backdrop-filter: blur(10px); border-top: 1px solid var(--vl-line); }
+.item { text-decoration: none; display: grid; justify-items: center; gap: 2px; min-height: 52px; padding: 6px 0; border: 0; background: transparent; color: var(--vl-muted); font-size: 0.72rem; font-weight: 600; }
+.on { color: var(--vl-gold-hi); }
+@media (min-width: 768px) { .nav { display: none; } }
